@@ -1,0 +1,118 @@
+/* ===== MAP SECTION ===== */
+.map-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.map-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 30px;
+  margin-top: 40px;
+  min-height: 420px;
+}
+
+/* ADDRESS CARD */
+.address-card {
+  background: linear-gradient(160deg, #0f766e 0%, #0f9fa8 100%);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.address-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.addr-icon {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.address-item h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.address-item p {
+  font-size: 14px;
+  color: white;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.address-item a {
+  font-size: 15px;
+  color: #a5f3fc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.address-item a:hover {
+  color: white;
+}
+
+.directions-btn {
+  display: block;
+  text-align: center;
+  background: #f97316;
+  color: white;
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: auto;
+}
+
+.directions-btn:hover {
+  background: #ea6c08;
+  transform: translateY(-2px);
+}
+
+/* MAP FRAME */
+.map-frame-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 380px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .map-frame-wrap {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-section {
+    padding: 50px 16px;
+  }
+}
