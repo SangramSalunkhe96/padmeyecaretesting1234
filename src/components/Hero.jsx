@@ -7,8 +7,8 @@ export default function Hero() {
   const carouselImages = [
     "/gallaryphotoes/PUKT0034.JPG",
     "/gallaryphotoes/PUKT0075.JPG",
-    "/gallaryphotoes/PUKT0103.JPG",
-    "/gallaryphotoes/PUKT0226.JPG",
+    "/gallaryphotoes/PUKT0233.JPG",
+    "/gallaryphotoes/PUKT0251.JPG",
     "/gallaryphotoes/PUKT0321.JPG",
     "/gallaryphotoes/PUKT0451.JPG",
   ];

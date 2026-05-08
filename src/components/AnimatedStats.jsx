@@ -66,6 +66,7 @@ export default function AnimatedStats() {
           <Counter end={18} label="Years Experience" duration={2200} />
           <Counter end={98} label="Patient Satisfaction %" duration={2300} />
           <Counter end={15} label="Expert Doctors" duration={2100} />
+          <Counter end={50000} label="Patients Treated" duration={2600} />
         </div>
       </div>
     </section>

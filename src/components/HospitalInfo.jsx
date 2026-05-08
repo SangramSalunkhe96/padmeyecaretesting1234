@@ -46,7 +46,7 @@ export default function HospitalInfo() {
           {/* LEFT: AVATAR + BASIC INFO */}
           <div className="doctor-left">
             <div className="doctor-avatar">
-              <img src="/gallaryphotoes/PUKT0320.JPG" alt="Dr. Vishal Patil" onError={(e) => {
+              <img src="/gallaryphotoes/PUKT0321.JPG" alt="Dr. Vishal Patil" onError={(e) => {
                 e.target.style.display = "none";
                 e.target.nextSibling.style.display = "flex";
               }} />
