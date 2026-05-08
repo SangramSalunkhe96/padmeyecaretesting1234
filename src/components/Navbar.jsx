@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Phone, MapPin, Menu, X, Mail } from "lucide-react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -27,20 +28,30 @@ export default function Navbar() {
 
         {/* LEFT MENU — desktop */}
         <nav className="nav-left">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => {
-                if (link.href === "/#treatments") {
-                  window.dispatchEvent(new CustomEvent("open-treatment-popup"));
-                }
-                setMenuOpen(false);
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => 
+            link.href === "/gallery" ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => {
+                  if (link.href === "/#treatments") {
+                    window.dispatchEvent(new CustomEvent("open-treatment-popup"));
+                  }
+                  setMenuOpen(false);
+                }}
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
 
         {/* CENTER BRAND */}
@@ -99,21 +110,32 @@ export default function Navbar() {
 
       {/* MOBILE MENU DRAWER */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        {navLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className="mobile-link"
-            onClick={() => {
-              if (link.href === "/#treatments") {
-                window.dispatchEvent(new CustomEvent("open-treatment-popup"));
-              }
-              setMenuOpen(false);
-            }}
-          >
-            {link.label}
-          </a>
-        ))}
+        {navLinks.map((link) =>
+          link.href === "/gallery" ? (
+            <Link
+              key={link.label}
+              to={link.href}
+              className="mobile-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ) : (
+            <a
+              key={link.label}
+              href={link.href}
+              className="mobile-link"
+              onClick={() => {
+                if (link.href === "/#treatments") {
+                  window.dispatchEvent(new CustomEvent("open-treatment-popup"));
+                }
+                setMenuOpen(false);
+              }}
+            >
+              {link.label}
+            </a>
+          )
+        )}
         <div className="mobile-contacts">
           <a href="tel:7030775791"><Phone size={14} /> 7030775791</a>
           <a href="tel:9859853853"><Phone size={14} /> 9859853853</a>
